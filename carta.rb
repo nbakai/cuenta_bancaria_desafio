@@ -1,20 +1,28 @@
 class Carta
     attr_accessor :numero, :pinta
 
-    def initialize(numero,pinta)
+    def initialize(numero, pinta)
         @numero = numero
-        
         @pinta = pinta
     end
    
 end
 
-num= 0
+def numero
+    @numero = rand(1..13)
+end
+def pinta
+    pinta = ['C', 'D','E','T']
+    pinta = pinta.sample
+end
+carta = Carta.new(numero,pinta)
 
-pin = ['C','D','E','T']
-num = Carta.new(num.rand(1,13))
-pin = Carta.new(pin.sample)
+n=5
+arr = []
+n.times do
+    carta = Carta.new(numero,pinta)
+    arr.push("#{carta.numero}#{carta.pinta}")
+end
 
-
-puts carta.numero
-puts carta.pinta
+print arr 
+puts
