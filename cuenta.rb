@@ -2,8 +2,8 @@ class CuentaBancaria
     attr_accessor :nombre_de_usuario, :numero_de_cuenta, :vip
 
     def initialize(nombre_usuario, numero_de_cuenta, vip=0)
-        numero_cuenta = numero_de_cuenta.digits
-        if numero_cuenta.count != 8
+        
+        if numero_de_cuenta.digits.count != 8
             raise RangeError, "El número de cuenta debe tener 8 dígitos"
         else
             @nombre_de_usuario = nombre_de_usuario
@@ -24,5 +24,5 @@ class CuentaBancaria
 end
 
 
-numerocuenta = CuentaBancaria.new('melisa',94345678,1)
+numerocuenta = CuentaBancaria.new('melisa',14345678,1)
 puts numerocuenta.numero_de_cuenta
