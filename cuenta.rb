@@ -24,5 +24,5 @@ class CuentaBancaria
 end
 
 
-numerocuenta = CuentaBancaria.new('melisa',90345678,1)
+numerocuenta = CuentaBancaria.new('melisa',94345678,1)
 puts numerocuenta.numero_de_cuenta
